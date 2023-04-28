@@ -1,4 +1,9 @@
 {
-    "defaultCommandTimeout": 20000
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports/mochawesome",
+    "overwrite": false,
+    "html": false,
+    "json": true
   }
-  
+}

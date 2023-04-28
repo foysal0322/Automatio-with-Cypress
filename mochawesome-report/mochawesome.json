@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-28T03:10:49.594Z",
+    "end": "2023-04-28T03:12:42.006Z",
+    "duration": 112412,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f4a6d82-cbd3-42d8-8670-488868f64dde",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pickaboo.cy.js",
+      "file": "cypress\\e2e\\pickaboo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b95d98ae-7c56-4464-b58c-eca0d51c3ea5",
+          "title": "Automation on pickaboo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a watch to cart",
+              "fullTitle": "Automation on pickaboo Add a watch to cart",
+              "timedOut": null,
+              "duration": 56810,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "navigate_homepage();\nlogin('foysal0322@gmail.com', 'TestP@ss123');\ncy.get('input.searchInput.form-control').eq(0).type('watch'); //search for product\ncy.wait(5000); // wait 5 sec to load the suggestion query\ncy.contains('in Watch').click();\ncy.contains('Search Result for \"watch\"').should('be.visible');\ncy.get('.product-title', {\n  timeout: 5000\n}).eq(0).click(); // click on the first product\ncy.wait(5000);\ncy.contains('ADD TO CART').click();\ncy.wait(5000);\n// cy.get('.bobble').contains('1').should('be.visible') // validating with cart's no\ncy.contains('cart').click();\ncy.wait(6000);\ncy.get('.save-button').contains('Remove').click(); // removing the product from the cart\ncy.wait(6000);\ncy.contains('Your cart is empty').should('be.visible');\nlogout();",
+              "err": {},
+              "uuid": "57333b10-8a1a-436f-ac11-2762c7771dae",
+              "parentUUID": "b95d98ae-7c56-4464-b58c-eca0d51c3ea5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update first name",
+              "fullTitle": "Automation on pickaboo Update first name",
+              "timedOut": null,
+              "duration": 33100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "navigate_homepage();\nlogin('foysal0322@gmail.com', 'TestP@ss123');\ncy.contains('My Account').click(); // click on my account\ncy.wait(3000);\ncy.contains('Manage Account').click();\ncy.contains('My Account').should('be.visible');\n// update the first name \ncy.contains('Edit').click();\ncy.get('input[placeholder=\"Enter your first name\"]').clear().type('Foysal updated');\ncy.xpath(\"//div[@class='Button__StyledBtn-sc-55nib8-0 fZtEtb dc-btn']//a\").click();\ncy.wait(3000);\n// reset the name\ncy.contains('Edit').click();\ncy.get('input[placeholder=\"Enter your first name\"]').clear().type('Foysal');\ncy.xpath(\"//div[@class='Button__StyledBtn-sc-55nib8-0 fZtEtb dc-btn']//a\").click();\ncy.wait(3000);\nlogout();",
+              "err": {},
+              "uuid": "2ddd67f9-30f1-4081-81ed-6e34cbc33916",
+              "parentUUID": "b95d98ae-7c56-4464-b58c-eca0d51c3ea5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to about us",
+              "fullTitle": "Automation on pickaboo Navigate to about us",
+              "timedOut": null,
+              "duration": 17966,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "navigate_homepage();\ncy.wait(5000);\ncy.contains('About Us').click();\ncy.title().should('eq', 'Get to Know About Us | pickaboo.com');",
+              "err": {},
+              "uuid": "4339cfc0-df24-4ceb-93a8-f4741e97b390",
+              "parentUUID": "b95d98ae-7c56-4464-b58c-eca0d51c3ea5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "57333b10-8a1a-436f-ac11-2762c7771dae",
+            "2ddd67f9-30f1-4081-81ed-6e34cbc33916",
+            "4339cfc0-df24-4ceb-93a8-f4741e97b390"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 107876,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

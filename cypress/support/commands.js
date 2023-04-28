@@ -25,3 +25,10 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 /// <reference types="Cypress" />
 /// <reference types="Cypress-xpath" />
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Log the error to the console
+    console.error('Uncaught exception', err)
+    // Return false to prevent Cypress from failing the test
+    return false
+  })

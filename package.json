@@ -18,6 +18,7 @@
   "homepage": "https://github.com/foysal0322/Automatio-with-Cypress#readme",
   "devDependencies": {
     "cypress": "^12.10.0",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.3"
   }
 }
