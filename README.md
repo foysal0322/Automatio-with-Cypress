@@ -1,5 +1,5 @@
 # Cypress Project Setup Guide
-
+Note: all the installation steps are for windows only.
 
 ## Prerequisites
 
